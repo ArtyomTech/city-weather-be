@@ -1,7 +1,10 @@
 package com.crespect.city_weather.dto;
 
+import lombok.Builder;
+
 import java.util.List;
 
+@Builder
 public record CityWeatherDto(
         CoordDto coord,
         List<WeatherDto> weather,
@@ -18,6 +21,8 @@ public record CityWeatherDto(
         int cod
 ) {
     public record WeatherDto(int id, String main, String description, String icon) { }
+
+    @Builder
     public record MainDto(
             double temp,
             double feelsLike,
@@ -28,6 +33,7 @@ public record CityWeatherDto(
             int seaLevel,
             int grndLevel
     ) { }
+
     public record WindDto(double speed, int deg, double gust) { }
     public record CloudsDto(int all) { }
     public record SysDto(int type, int id, String country, long sunrise, long sunset) { }

@@ -74,3 +74,11 @@ The application uses `application.yml` for the following configuration settings:
 | `api.units`                | Specifies the unit for temperature. Set to `metric` for Celsius.                                            |
 | `api.cities-url`           | URL for downloading the list of cities (`https://bulk.openweathermap.org/sample/city.list.min.json.gz`).    |
 | `api.city-names`           | List of city names for which weather data will be fetched.                                                  |
+
+
+## Run Tests
+1. To run JUnit tests:
+
+    ```bash
+    mvn test
+    ```
